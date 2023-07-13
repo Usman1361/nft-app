@@ -21,6 +21,7 @@ import {
   c3Img3,
   c3Img4,
 } from "../SmallComponent/images";
+import { Link } from "react-router-dom";
 
 const CollectionCardSection = () => {
   const cardDetails = [
@@ -89,8 +90,13 @@ const CollectionCardSection = () => {
                   borderRadius: "8px",
                 }}
               >
-                <img src={rocketIcon} width={30} height={20} />
-                Explore All
+                <img src={rocketIcon} width={30} height={20} />E{" "}
+                <Link
+                  to="/explore"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Explore All
+                </Link>
               </Button>
             </Box>
           </Grid>

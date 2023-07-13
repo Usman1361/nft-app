@@ -3,6 +3,7 @@ import { Box, Grid, Container, Typography, Button } from "@mui/material";
 import { sCard2 } from "../SmallComponent/images";
 import SlidingCard from "../SlidingCard/SlidingCard";
 import { historyIcon, loadIcon } from "../SmallComponent/images";
+import { Link } from "react-router-dom";
 
 const TodayPickSection = () => {
   return (
@@ -57,7 +58,12 @@ const TodayPickSection = () => {
                 }}
               >
                 <img src={loadIcon} alt="" width={20} hight={20} />
-                Load More
+                <Link
+                  to="/explore"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Load More
+                </Link>
               </Button>
             </Box>
           </Grid>

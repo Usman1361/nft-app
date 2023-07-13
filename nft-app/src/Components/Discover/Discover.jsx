@@ -3,6 +3,7 @@ import { Box, Grid, Container, Typography, Button } from "@mui/material";
 import { discoverImg, bgImg } from "../SmallComponent/images.jsx";
 import ExploreOutlinedIcon from "@mui/icons-material/ExploreOutlined";
 import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
+import { Link } from "react-router-dom";
 const Discover = () => {
   return (
     <Box sx={{ backgroundColor: "#121212" }}>
@@ -63,7 +64,12 @@ const Discover = () => {
                 }}
               >
                 <ExploreOutlinedIcon sx={{ edge: "start" }} />
-                Explore
+                <Link
+                  to="/explore"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Explore
+                </Link>
               </Button>
               <Button
                 variant="contained"

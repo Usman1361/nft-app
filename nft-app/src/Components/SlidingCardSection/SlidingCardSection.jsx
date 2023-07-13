@@ -16,6 +16,7 @@ import {
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { Link } from "react-router-dom";
 const SlidingCardSection = () => {
   const theme = useTheme();
   const lessThanSmall = useMediaQuery(theme.breakpoints.down("sm"));
@@ -47,7 +48,12 @@ const SlidingCardSection = () => {
                 }}
               >
                 <img src={rocketIcon} width={30} height={20} />
-                Explore All
+                <Link
+                  to="/explore"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Explore All
+                </Link>
               </Button>
             </Box>
           </Grid>
