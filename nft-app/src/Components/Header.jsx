@@ -20,6 +20,7 @@ import { logo } from "./SmallComponent/images.jsx";
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 import CloseIcon from "@mui/icons-material/Close";
 import SearchIcon from "@mui/icons-material/Search";
+import { Link } from "react-router-dom";
 export const drawerWidth = 240;
 const navItems = ["Home", "Explore", "Pages", "ContactUs"];
 function Header(props) {
@@ -49,7 +50,30 @@ function Header(props) {
                 color: "#FFFFFF",
               }}
             >
-              <ListItemText primary={item} />
+              {i === 0 && (
+                <Link
+                  to="/"
+                  style={{ textDecoration: "none", color: "#FFFFFF" }}
+                >
+                  <ListItemText primary={item} />
+                </Link>
+              )}
+              {i === 1 && (
+                <Link
+                  to="/explore"
+                  style={{ textDecoration: "none", color: "#FFFFFF" }}
+                >
+                  <ListItemText primary={item} />
+                </Link>
+              )}
+              {i != -0 && i !== 1 && (
+                <Link
+                  to="/working"
+                  style={{ textDecoration: "none", color: "#FFFFFF" }}
+                >
+                  <ListItemText primary={item} />
+                </Link>
+              )}
             </ListItemButton>
           </ListItem>
         ))}
@@ -64,7 +88,12 @@ function Header(props) {
           }}
         >
           <AccountBalanceWalletIcon sx={{ edge: "start" }} />
-          Connect Wallet
+          <Link
+            to="/working"
+            style={{ textDecoration: "none", color: "#FFFFFF" }}
+          >
+            Connect Wallet
+          </Link>
         </Button>
       </List>
     </Box>
@@ -133,7 +162,30 @@ function Header(props) {
                       fontWeight: 700,
                     }}
                   >
-                    {item}
+                    {i == 0 && (
+                      <Link
+                        to="/"
+                        style={{ textDecoration: "none", color: "#FFFFFF" }}
+                      >
+                        {item}
+                      </Link>
+                    )}
+                    {i == 1 && (
+                      <Link
+                        to="/explore"
+                        style={{ textDecoration: "none", color: "#FFFFFF" }}
+                      >
+                        {item}
+                      </Link>
+                    )}
+                    {i != 0 && i != 1 && (
+                      <Link
+                        to="/working"
+                        style={{ textDecoration: "none", color: "#FFFFFF" }}
+                      >
+                        {item}
+                      </Link>
+                    )}
                   </Button>
                 ))}
                 <Button
@@ -146,7 +198,12 @@ function Header(props) {
                   }}
                 >
                   <AccountBalanceWalletIcon sx={{ edge: "start" }} />
-                  Connect Wallet
+                  <Link
+                    to="/working"
+                    style={{ textDecoration: "none", color: "#FFFFFF" }}
+                  >
+                    Connect Wallet
+                  </Link>
                 </Button>
               </Box>
               <IconButton

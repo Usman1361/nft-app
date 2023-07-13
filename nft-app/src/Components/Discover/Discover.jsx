@@ -3,7 +3,6 @@ import { Box, Grid, Container, Typography, Button } from "@mui/material";
 import { discoverImg, bgImg } from "../SmallComponent/images.jsx";
 import ExploreOutlinedIcon from "@mui/icons-material/ExploreOutlined";
 import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
-
 const Discover = () => {
   return (
     <Box sx={{ backgroundColor: "#121212" }}>

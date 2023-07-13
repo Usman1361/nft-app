@@ -67,7 +67,7 @@ const CardSection = () => {
           <Grid
             container
             mt={5}
-            direction={{ xs: "column", md: "row" }}
+            
             spacing={3}
             sx={{
               display: "flex",
@@ -78,6 +78,7 @@ const CardSection = () => {
               <Grid
                 item
                 xs={12}
+                sm={6}
                 md={3}
                 sx={{ display: "flex", justifyContent: "center" }}
               >

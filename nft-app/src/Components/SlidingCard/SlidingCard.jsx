@@ -1,20 +1,116 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Stack, Typography } from "@mui/material";
 import { sCard1 } from "../SmallComponent/images";
+import {
+  avatar,
+  heart,
+  crown,
+  ethereum,
+  timer,
+} from "../SmallComponent/images";
 
-const SlidingCard = () => {
+const SlidingCard = (props) => {
+  const itemDet = [
+    {
+      icon: heart,
+      value: "145",
+    },
+    {
+      icon: crown,
+      value: "1 / 100",
+    },
+    {
+      icon: ethereum,
+      value: "5.00ETH",
+    },
+  ];
   return (
-    <Box height={300} width={300} sx={{ backgroundColor: "#3C485D" }}>
-      <Box height="100%" width="100%">
+    <Box
+      mt={5}
+      pb={2}
+      width={350}
+      sx={{ backgroundColor: "#3C485D", borderRadius: "24px" }}
+    >
+      <Box height="100%" width="90%" sx={{ ml: "auto", mr: "auto" }}>
         <Box
-          sx={{ backgroundColor: "white" }}
+          mt={4}
+          sx={{ background: props.bgColor, borderRadius: "12px" }}
           component="img"
-          src={sCard1}
+          src={props.Image}
           height="100%"
           width="100%"
         />
       </Box>
-      <Typography variant="h3">Hi</Typography>
+      <Box pt={2} pl={2} sx={{ display: "flex" }}>
+        <Box component="img" src={avatar} alt="avatar" height={40} width={40} />
+        <Typography variant="h6" pl={1} pt={1} sx={{ color: "#FFFFFF" }}>
+          Metaverse
+        </Typography>
+      </Box>
+      <Typography
+        variant="body2"
+        pl={8}
+        sx={{ display: "flex", color: "#8393AF" }}
+      >
+        Created by John Doe
+      </Typography>
+      <Stack
+        sx={{ justifyContent: "space-evenly" }}
+        mt={3}
+        direction="row"
+        spacing={5}
+      >
+        {itemDet.map((item, i) => (
+          <Box
+            sx={{
+              display: i == 1 ? (props.crown ? "flex" : "none") : "flex",
+              flexDirection: "column",
+            }}
+          >
+            <Box
+              component="img"
+              src={item.icon}
+              hight={24}
+              width={24}
+              sx={{ ml: "auto", mr: "auto" }}
+            />
+            <Typography mt={1} sx={{ color: "var(--neutral-white, #FFF)" }}>
+              {item.value}
+            </Typography>
+          </Box>
+        ))}
+      </Stack>
+      <Box mt={3}>
+        <Button
+          variant="contained"
+          sx={{
+            marginLeft: "12px",
+            background: "var(--text-text-dark, #3C485D)",
+            borderRadius: "8px",
+            padding: "10px",
+            justifyContent: "center",
+            "&:hover": {
+              backgroundColor: "var(--text-text-dark, #3C485D)",
+            },
+          }}
+        >
+          <img src={props.lButtonIcon} alt="" width={24} hight={24} />
+          <Typography variant="body2">{props.lButton}</Typography>
+        </Button>
+        <Button
+          variant="contained"
+          sx={{
+            marginLeft: "12px",
+            background: "linear-gradient( #FDAE8F , #FD1C68 )",
+            borderRadius: "8px",
+            padding: "10px 24px",
+            justifyContent: "center",
+          }}
+        >
+          <img src={crown} alt="" width={20} hight={20} />
+          <Typography variant="body2">Place Bid</Typography>
+        </Button>
+      </Box>
     </Box>
   );
 };
