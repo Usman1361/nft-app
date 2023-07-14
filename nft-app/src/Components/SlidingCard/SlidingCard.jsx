@@ -1,13 +1,6 @@
 import React from "react";
 import { Box, Button, Stack, Typography } from "@mui/material";
-import { sCard1 } from "../SmallComponent/images";
-import {
-  avatar,
-  heart,
-  crown,
-  ethereum,
-  timer,
-} from "../SmallComponent/images";
+import { avatar, heart, crown, ethereum } from "../SmallComponent/images";
 
 const SlidingCard = (props) => {
   const itemDet = [
@@ -28,7 +21,7 @@ const SlidingCard = (props) => {
     <Box
       mt={5}
       pb={2}
-      width={350}
+      width={{ xs: 320, md: 350 }}
       sx={{ backgroundColor: "#3C485D", borderRadius: "24px" }}
     >
       <Box height="100%" width="90%" sx={{ ml: "auto", mr: "auto" }}>
@@ -63,7 +56,7 @@ const SlidingCard = (props) => {
         {itemDet.map((item, i) => (
           <Box
             sx={{
-              display: i == 1 ? (props.crown ? "flex" : "none") : "flex",
+              display: i === 1 ? (props.crown ? "flex" : "none") : "flex",
               flexDirection: "column",
             }}
           >

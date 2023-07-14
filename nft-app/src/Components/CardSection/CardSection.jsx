@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, Grid, Stack, Typography } from "@mui/material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import Card from "../Card/Card";
 import {
   walletButton,
@@ -7,7 +7,6 @@ import {
   imgIcon,
   storeIcon,
 } from "../SmallComponent/images";
-import { bgImg2 } from "../SmallComponent/images";
 
 const CardSection = () => {
   const cardData = [
@@ -67,7 +66,6 @@ const CardSection = () => {
           <Grid
             container
             mt={5}
-            
             spacing={3}
             sx={{
               display: "flex",

@@ -14,7 +14,7 @@ const Discover = () => {
           spacing={2}
           sx={{
             flexDirection: { xs: "column-reverse", md: "row" },
-            background: `#121212 url('${bgImg}')no-repeat top right / 500px`,
+            background: `#121212 url('${bgImg}')no-repeat top right / 500px `,
           }}
         >
           <Grid item xs={12} md={7}>

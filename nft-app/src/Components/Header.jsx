@@ -66,7 +66,7 @@ function Header(props) {
                   <ListItemText primary={item} />
                 </Link>
               )}
-              {i != -0 && i !== 1 && (
+              {i !== -0 && i !== 1 && (
                 <Link
                   to="/working"
                   style={{ textDecoration: "none", color: "#FFFFFF" }}
@@ -162,7 +162,7 @@ function Header(props) {
                       fontWeight: 700,
                     }}
                   >
-                    {i == 0 && (
+                    {i === 0 && (
                       <Link
                         to="/"
                         style={{ textDecoration: "none", color: "#FFFFFF" }}
@@ -170,7 +170,7 @@ function Header(props) {
                         {item}
                       </Link>
                     )}
-                    {i == 1 && (
+                    {i === 1 && (
                       <Link
                         to="/explore"
                         style={{ textDecoration: "none", color: "#FFFFFF" }}
@@ -178,7 +178,7 @@ function Header(props) {
                         {item}
                       </Link>
                     )}
-                    {i != 0 && i != 1 && (
+                    {i !== 0 && i !== 1 && (
                       <Link
                         to="/working"
                         style={{ textDecoration: "none", color: "#FFFFFF" }}

@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, Grid, Typography, Button, Stack } from "@mui/material";
+import { Box, Container, Grid, Typography, Button } from "@mui/material";
 import CollectionCard from "../CollectionCard/CollectionCard";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -86,11 +86,11 @@ const CollectionCardSection = () => {
                 size="small"
                 sx={{
                   background: "linear-gradient( #FDAE8F , #FD1C68 )",
-                  padding: { xs: "7px", md: "10px" },
+                  padding: { xs: "5px", md: "10px" },
                   borderRadius: "8px",
                 }}
               >
-                <img src={rocketIcon} width={30} height={20} />E{" "}
+                <img alt="" src={rocketIcon} width={30} height={20} />
                 <Link
                   to="/explore"
                   style={{ textDecoration: "none", color: "white" }}
@@ -119,7 +119,7 @@ const CollectionCardSection = () => {
               <Grid
                 item
                 xs={12}
-                sm={item == 2 ? 12 : 6}
+                sm={item === 2 ? 12 : 6}
                 md={4}
                 sx={{ display: "flex", justifyContent: "center" }}
               >

@@ -47,7 +47,7 @@ const SlidingCardSection = () => {
                   borderRadius: "8px",
                 }}
               >
-                <img src={rocketIcon} width={30} height={20} />
+                <img alt="logoimg" src={rocketIcon} width={30} height={20} />
                 <Link
                   to="/explore"
                   style={{ textDecoration: "none", color: "white" }}

@@ -16,31 +16,31 @@ const Explore = () => {
 
   const handleChange = (event, i) => {
     console.log(i, event.target);
-    if (i == 0) {
+    if (i === 0) {
       setSortDetails((preDetails) => ({
         ...preDetails,
         collection: event.target.value,
       }));
     }
-    if (i == 1) {
+    if (i === 1) {
       setSortDetails((preDetails) => ({
         ...preDetails,
         buyNow: event.target.value,
       }));
     }
-    if (i == 2) {
+    if (i === 2) {
       setSortDetails((preDetails) => ({
         ...preDetails,
         allItems: event.target.value,
       }));
     }
-    if (i == 3) {
+    if (i === 3) {
       setSortDetails((preDetails) => ({
         ...preDetails,
         allArtwork: event.target.value,
       }));
     }
-    if (i == 4) {
+    if (i === 4) {
       setSortDetails((preDetails) => ({
         ...preDetails,
         sortBy: event.target.value,

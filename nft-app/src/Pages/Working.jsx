@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grid, Container, Typography } from "@mui/material";
+import { Box, Grid, Container } from "@mui/material";
 import Blink from "react-blink-text";
 
 const Working = () => {
